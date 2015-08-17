@@ -133,6 +133,8 @@ function BBG_WrapStuff( $post ) {
 			if (substr($match, 0, 1) == '#' || substr(strtolower($match), 0, 3) == 'rgb') {
 				$newpost .= "<div class='section full-width-background' style='background:" . $match . ";'>"; 
 			} else {
+
+				
 				$newpost .= "<div class='section full-width-background " . $match . "'>"; 
 			}
 			

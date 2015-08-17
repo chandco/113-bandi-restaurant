@@ -104,7 +104,7 @@ input[type='submit'] {
 
 		input[type='radio'],
 		input[type='checkbox'] {  
-			+ label {
+			~ label {
 			
 				position: relative;
 				display: block;
@@ -159,7 +159,7 @@ input[type='submit'] {
 		input[type='radio'] {
 
 
-			&:checked + label {
+			&:checked ~ label {
 				
 				background: fade(@highlight,50%);
 				
@@ -175,7 +175,7 @@ input[type='submit'] {
 
 		input[type='checkbox'] { 
 
-			+ label {
+			~ label {
 				&:before {
 					content: @fa-var-square-o;
 				}
@@ -195,7 +195,7 @@ input[type='submit'] {
 		}
 
 		input[type='radio'] {
-			+ label {
+			~ label {
 
 
 				&:before {
@@ -209,7 +209,7 @@ input[type='submit'] {
 				}
 			}
 
-			&:checked + label {
+			&:checked ~ label {
 				&:before {
 					content: @fa-var-dot-circle-o;
 				}

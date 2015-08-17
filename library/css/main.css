@@ -2181,12 +2181,12 @@ POSTS & CONTENT STYLES
 /* LESS Document */
 .central-column {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .central-column {
     width: 100%;
     box-sizing: border-box;
@@ -2196,12 +2196,12 @@ POSTS & CONTENT STYLES
 }
 .max-central {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .max-central {
     width: 100%;
     box-sizing: border-box;
@@ -2210,7 +2210,7 @@ POSTS & CONTENT STYLES
   }
 }
 .feature {
-  box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
   text-decoration: none;
   position: relative;
   width: 100%;
@@ -2257,6 +2257,15 @@ POSTS & CONTENT STYLES
 .feature.lightgrey .cta {
   background: #ffffff;
   color: #999999 !important;
+}
+.feature.superlightgrey {
+  background: #eeeeee;
+  color: #000000;
+}
+.feature.superlightgrey .cta-inline,
+.feature.superlightgrey .cta {
+  background: #000000;
+  color: #eeeeee !important;
 }
 .feature.green {
   background: #278b27;
@@ -2330,6 +2339,9 @@ POSTS & CONTENT STYLES
 .feature.lightgrey svg .triangle {
   fill: #999999;
 }
+.feature.superlightgrey svg .triangle {
+  fill: #eeeeee;
+}
 .feature.green svg .triangle {
   fill: #278b27;
 }
@@ -2401,13 +2413,17 @@ POSTS & CONTENT STYLES
   width: 100%;
   left: 0;
   z-index: 2;
-  margin: 0 0 1em 0;
+  margin: 0 0 0px 0;
   font-size: 1.8em;
   line-height: 1.2;
-  text-align: center;
+  text-align: left;
   -webkit-transition: background 0.2s ease;
           transition: background 0.2s ease;
   min-height: 60px;
+  color: inherit;
+}
+.feature h2 a {
+  color: inherit;
 }
 .feature div.content {
   box-sizing: border-box;
@@ -2415,6 +2431,10 @@ POSTS & CONTENT STYLES
   padding: 1em;
   line-height: 1.2;
   font-size: 0.9em;
+  color: inherit;
+  text-align: left;
+}
+.feature div.content a {
   color: inherit;
 }
 .col-smart:first-child:nth-last-child(4) ~ .col-smart .feature .content h2,
@@ -2637,17 +2657,30 @@ body {
   padding-top: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   background: #fff;
-  max-width: 1200px;
+  max-width: 1300px;
+}
+.entry-content {
+  padding: 1.5em 0 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.entry-content > * {
+  width: 100%;
 }
 .page #inner-content .entry-content > *,
 .page #inner-content .article-header > * {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .page #inner-content .entry-content > *,
   .page #inner-content .article-header > * {
     width: 100%;
@@ -2657,22 +2690,23 @@ body {
   }
 }
 .page #inner-content .full-width-background {
-  margin: 2em auto;
+  margin: 0;
   padding: 2em 0;
   max-width: 100%;
   background: #278b27;
   background: #ffffff;
   color: #444444;
   background-image: url('/wp-content/themes/bandi-restaurant/library/images/textured-background.png') !important;
+  clear: both;
 }
 .page #inner-content .full-width-background > * {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .page #inner-content .full-width-background > * {
     width: 100%;
     box-sizing: border-box;
@@ -2680,7 +2714,7 @@ body {
     padding-right: 2em;
   }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .page #inner-content .full-width-background {
     width: 100%;
   }
@@ -2708,6 +2742,15 @@ body {
 .page #inner-content .full-width-background.lightgrey .cta {
   background: #ffffff;
   color: #999999 !important;
+}
+.page #inner-content .full-width-background.superlightgrey {
+  background: #eeeeee;
+  color: #000000;
+}
+.page #inner-content .full-width-background.superlightgrey .cta-inline,
+.page #inner-content .full-width-background.superlightgrey .cta {
+  background: #000000;
+  color: #eeeeee !important;
 }
 .page #inner-content .full-width-background.green {
   background: #278b27;
@@ -2778,9 +2821,23 @@ body {
 .page #inner-content .full-width-background:last-child {
   margin-bottom: 0;
   padding-bottom: 4em;
+  box-shadow: inset 0 -7px 8px -4px rgba(0, 0, 0, 0.62);
 }
-.page #inner-content .full-width-background + .full-width-background {
-  margin-top: -2em;
+.page #inner-content .full-width-background.half {
+  clear: none;
+  width: 50%;
+  padding: 2em;
+  float: left;
+  margin-bottom: 0;
+  box-shadow: none;
+}
+@media screen and (max-width: 60em) {
+  .page #inner-content .full-width-background.half {
+    width: 100%;
+    padding: 2em 0;
+    clear: both;
+    float: none;
+  }
 }
 .purple li.capacities,
 .green li.capacities,
@@ -2905,7 +2962,7 @@ h3 {
   margin-bottom: 1em;
 }
 h4 {
-  font-size: 1em;
+  font-size: 1.3em;
   line-height: 1.375em;
   margin-top: 1.375em;
   margin-bottom: 1.375em;
@@ -3022,7 +3079,7 @@ a + a.cta {
   padding: 2% 0;
   margin: auto;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -3034,7 +3091,7 @@ a + a.cta {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .latest-blogs-feed {
     width: 100%;
     box-sizing: border-box;
@@ -7644,10 +7701,10 @@ input[type='submit']:hover {
 .gfield_checkbox input[type='checkbox'] {
   display: none;
 }
-.gfield_radio input[type='radio'] + label,
-.gfield_checkbox input[type='radio'] + label,
-.gfield_radio input[type='checkbox'] + label,
-.gfield_checkbox input[type='checkbox'] + label {
+.gfield_radio input[type='radio'] ~ label,
+.gfield_checkbox input[type='radio'] ~ label,
+.gfield_radio input[type='checkbox'] ~ label,
+.gfield_checkbox input[type='checkbox'] ~ label {
   position: relative;
   display: block;
   cursor: pointer;
@@ -7659,26 +7716,26 @@ input[type='submit']:hover {
           transition: border 0.4s ease, background 0.6s ease;
   border-radius: 2px;
 }
-.gfield_radio input[type='radio'] + label:hover,
-.gfield_checkbox input[type='radio'] + label:hover,
-.gfield_radio input[type='checkbox'] + label:hover,
-.gfield_checkbox input[type='checkbox'] + label:hover {
+.gfield_radio input[type='radio'] ~ label:hover,
+.gfield_checkbox input[type='radio'] ~ label:hover,
+.gfield_radio input[type='checkbox'] ~ label:hover,
+.gfield_checkbox input[type='checkbox'] ~ label:hover {
   background: rgba(39, 139, 39, 0.2);
 }
-.gfield_radio input[type='radio'] + label:before,
-.gfield_checkbox input[type='radio'] + label:before,
-.gfield_radio input[type='checkbox'] + label:before,
-.gfield_checkbox input[type='checkbox'] + label:before {
+.gfield_radio input[type='radio'] ~ label:before,
+.gfield_checkbox input[type='radio'] ~ label:before,
+.gfield_radio input[type='checkbox'] ~ label:before,
+.gfield_checkbox input[type='checkbox'] ~ label:before {
   color: #444444;
   -webkit-transition: color 0.4s ease;
           transition: color 0.4s ease;
   z-index: 2;
   margin-right: 0.5em;
 }
-.gfield_radio input[type='radio'] + label:after,
-.gfield_checkbox input[type='radio'] + label:after,
-.gfield_radio input[type='checkbox'] + label:after,
-.gfield_checkbox input[type='checkbox'] + label:after {
+.gfield_radio input[type='radio'] ~ label:after,
+.gfield_checkbox input[type='radio'] ~ label:after,
+.gfield_radio input[type='checkbox'] ~ label:after,
+.gfield_checkbox input[type='checkbox'] ~ label:after {
   content: "";
   -webkit-transition: text-shadow 0.4s ease, color 0.4s ease;
           transition: text-shadow 0.4s ease, color 0.4s ease;
@@ -7686,14 +7743,14 @@ input[type='submit']:hover {
   z-index: 1;
   text-shadow: 0px 0px 0 #333333, 0px 0px 0 #333333, 0px 0px 0 #333333, 0px 0px 0 #333333;
 }
-.gfield_radio input[type='radio'] + label:after,
-.gfield_checkbox input[type='radio'] + label:after,
-.gfield_radio input[type='checkbox'] + label:after,
-.gfield_checkbox input[type='checkbox'] + label:after,
-.gfield_radio input[type='radio'] + label:before,
-.gfield_checkbox input[type='radio'] + label:before,
-.gfield_radio input[type='checkbox'] + label:before,
-.gfield_checkbox input[type='checkbox'] + label:before {
+.gfield_radio input[type='radio'] ~ label:after,
+.gfield_checkbox input[type='radio'] ~ label:after,
+.gfield_radio input[type='checkbox'] ~ label:after,
+.gfield_checkbox input[type='checkbox'] ~ label:after,
+.gfield_radio input[type='radio'] ~ label:before,
+.gfield_checkbox input[type='radio'] ~ label:before,
+.gfield_radio input[type='checkbox'] ~ label:before,
+.gfield_checkbox input[type='checkbox'] ~ label:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -7712,34 +7769,34 @@ input[type='submit']:hover {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.gfield_radio input[type='radio'] + label:after.pull-left,
-.gfield_checkbox input[type='radio'] + label:after.pull-left,
-.gfield_radio input[type='checkbox'] + label:after.pull-left,
-.gfield_checkbox input[type='checkbox'] + label:after.pull-left,
-.gfield_radio input[type='radio'] + label:before.pull-left,
-.gfield_checkbox input[type='radio'] + label:before.pull-left,
-.gfield_radio input[type='checkbox'] + label:before.pull-left,
-.gfield_checkbox input[type='checkbox'] + label:before.pull-left {
+.gfield_radio input[type='radio'] ~ label:after.pull-left,
+.gfield_checkbox input[type='radio'] ~ label:after.pull-left,
+.gfield_radio input[type='checkbox'] ~ label:after.pull-left,
+.gfield_checkbox input[type='checkbox'] ~ label:after.pull-left,
+.gfield_radio input[type='radio'] ~ label:before.pull-left,
+.gfield_checkbox input[type='radio'] ~ label:before.pull-left,
+.gfield_radio input[type='checkbox'] ~ label:before.pull-left,
+.gfield_checkbox input[type='checkbox'] ~ label:before.pull-left {
   margin-right: .3em;
 }
-.gfield_radio input[type='radio'] + label:after.pull-right,
-.gfield_checkbox input[type='radio'] + label:after.pull-right,
-.gfield_radio input[type='checkbox'] + label:after.pull-right,
-.gfield_checkbox input[type='checkbox'] + label:after.pull-right,
-.gfield_radio input[type='radio'] + label:before.pull-right,
-.gfield_checkbox input[type='radio'] + label:before.pull-right,
-.gfield_radio input[type='checkbox'] + label:before.pull-right,
-.gfield_checkbox input[type='checkbox'] + label:before.pull-right {
+.gfield_radio input[type='radio'] ~ label:after.pull-right,
+.gfield_checkbox input[type='radio'] ~ label:after.pull-right,
+.gfield_radio input[type='checkbox'] ~ label:after.pull-right,
+.gfield_checkbox input[type='checkbox'] ~ label:after.pull-right,
+.gfield_radio input[type='radio'] ~ label:before.pull-right,
+.gfield_checkbox input[type='radio'] ~ label:before.pull-right,
+.gfield_radio input[type='checkbox'] ~ label:before.pull-right,
+.gfield_checkbox input[type='checkbox'] ~ label:before.pull-right {
   margin-left: .3em;
 }
-.gfield_radio input[type='radio'] + label:after:before,
-.gfield_checkbox input[type='radio'] + label:after:before,
-.gfield_radio input[type='checkbox'] + label:after:before,
-.gfield_checkbox input[type='checkbox'] + label:after:before,
-.gfield_radio input[type='radio'] + label:before:before,
-.gfield_checkbox input[type='radio'] + label:before:before,
-.gfield_radio input[type='checkbox'] + label:before:before,
-.gfield_checkbox input[type='checkbox'] + label:before:before {
+.gfield_radio input[type='radio'] ~ label:after:before,
+.gfield_checkbox input[type='radio'] ~ label:after:before,
+.gfield_radio input[type='checkbox'] ~ label:after:before,
+.gfield_checkbox input[type='checkbox'] ~ label:after:before,
+.gfield_radio input[type='radio'] ~ label:before:before,
+.gfield_checkbox input[type='radio'] ~ label:before:before,
+.gfield_radio input[type='checkbox'] ~ label:before:before,
+.gfield_checkbox input[type='checkbox'] ~ label:before:before {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -7748,40 +7805,40 @@ input[type='submit']:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.gfield_radio input[type='checkbox']:checked + label,
-.gfield_checkbox input[type='checkbox']:checked + label,
-.gfield_radio input[type='radio']:checked + label,
-.gfield_checkbox input[type='radio']:checked + label {
+.gfield_radio input[type='checkbox']:checked ~ label,
+.gfield_checkbox input[type='checkbox']:checked ~ label,
+.gfield_radio input[type='radio']:checked ~ label,
+.gfield_checkbox input[type='radio']:checked ~ label {
   background: rgba(0, 134, 172, 0.5);
 }
-.gfield_radio input[type='checkbox']:checked + label:hover,
-.gfield_checkbox input[type='checkbox']:checked + label:hover,
-.gfield_radio input[type='radio']:checked + label:hover,
-.gfield_checkbox input[type='radio']:checked + label:hover {
+.gfield_radio input[type='checkbox']:checked ~ label:hover,
+.gfield_checkbox input[type='checkbox']:checked ~ label:hover,
+.gfield_radio input[type='radio']:checked ~ label:hover,
+.gfield_checkbox input[type='radio']:checked ~ label:hover {
   background: rgba(0, 134, 172, 0.3);
 }
-.gfield_radio input[type='checkbox'] + label:before,
-.gfield_checkbox input[type='checkbox'] + label:before {
+.gfield_radio input[type='checkbox'] ~ label:before,
+.gfield_checkbox input[type='checkbox'] ~ label:before {
   content: "\f096";
 }
-.gfield_radio input[type='checkbox'] + label:hover:before,
-.gfield_checkbox input[type='checkbox'] + label:hover:before {
+.gfield_radio input[type='checkbox'] ~ label:hover:before,
+.gfield_checkbox input[type='checkbox'] ~ label:hover:before {
   content: "\f14a";
 }
 .gfield_radio input[type='checkbox']:checked + label:before,
 .gfield_checkbox input[type='checkbox']:checked + label:before {
   content: "\f14a";
 }
-.gfield_radio input[type='radio'] + label:before,
-.gfield_checkbox input[type='radio'] + label:before {
+.gfield_radio input[type='radio'] ~ label:before,
+.gfield_checkbox input[type='radio'] ~ label:before {
   content: "\f10c";
 }
-.gfield_radio input[type='radio'] + label:hover:before,
-.gfield_checkbox input[type='radio'] + label:hover:before {
+.gfield_radio input[type='radio'] ~ label:hover:before,
+.gfield_checkbox input[type='radio'] ~ label:hover:before {
   content: "\f192";
 }
-.gfield_radio input[type='radio']:checked + label:before,
-.gfield_checkbox input[type='radio']:checked + label:before {
+.gfield_radio input[type='radio']:checked ~ label:before,
+.gfield_checkbox input[type='radio']:checked ~ label:before {
   content: "\f192";
 }
 #wiki-menu .visual-menu {
@@ -8326,7 +8383,7 @@ html {
   }
 }
 .page-template-default .page-title {
-  text-align: center;
+  text-align: left;
 }
 .page #inner-content .full-width-background.yellow {
   margin-top: 2em;

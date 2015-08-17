@@ -169,6 +169,16 @@ body {
 }
 
 
+.entry-content {
+  padding: 1.5em 0 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.entry-content > * {
+  width:100%;
+}
+
 .page #inner-content {
    
   
@@ -178,7 +188,7 @@ body {
 
     .full-width-background {
 
-      margin: 2em auto;
+      margin: 0;
       padding: 2em 0;
       max-width: 100%;
 
@@ -206,12 +216,38 @@ body {
       &:last-child {
         margin-bottom: 0;
         padding-bottom: 4em;
+        box-shadow: inset 0 -7px 8px -4px rgba(0, 0, 0, 0.62);
+      }
+
+      clear: both;
+
+      &.half {
+
+        clear: none;
+        width: 50%;
+        padding: 2em;
+        float: left;
+        margin-bottom: 0;
+        box-shadow: none;
+
+        + .half {
+          
+        }
+
+        @media screen and (max-width: @tablet-break) {
+          width: 100%;
+          padding: 2em 0;
+          clear: both;
+          float: none;
+        }
       }
     }
 
 
+
+
     .full-width-background + .full-width-background {
-      margin-top: -2em;
+      
     }
 
 }

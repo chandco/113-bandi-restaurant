@@ -1805,12 +1805,12 @@
 /* LESS Document */
 .central-column {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .central-column {
     width: 100%;
     box-sizing: border-box;
@@ -1820,12 +1820,12 @@
 }
 .max-central {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .max-central {
     width: 100%;
     box-sizing: border-box;
@@ -1834,7 +1834,7 @@
   }
 }
 .feature {
-  box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
   text-decoration: none;
   position: relative;
   width: 100%;
@@ -1881,6 +1881,15 @@
 .feature.lightgrey .cta {
   background: #ffffff;
   color: #999999 !important;
+}
+.feature.superlightgrey {
+  background: #eeeeee;
+  color: #000000;
+}
+.feature.superlightgrey .cta-inline,
+.feature.superlightgrey .cta {
+  background: #000000;
+  color: #eeeeee !important;
 }
 .feature.green {
   background: #278b27;
@@ -1954,6 +1963,9 @@
 .feature.lightgrey svg .triangle {
   fill: #999999;
 }
+.feature.superlightgrey svg .triangle {
+  fill: #eeeeee;
+}
 .feature.green svg .triangle {
   fill: #278b27;
 }
@@ -2025,13 +2037,17 @@
   width: 100%;
   left: 0;
   z-index: 2;
-  margin: 0 0 1em 0;
+  margin: 0 0 0px 0;
   font-size: 1.8em;
   line-height: 1.2;
-  text-align: center;
+  text-align: left;
   -webkit-transition: background 0.2s ease;
           transition: background 0.2s ease;
   min-height: 60px;
+  color: inherit;
+}
+.feature h2 a {
+  color: inherit;
 }
 .feature div.content {
   box-sizing: border-box;
@@ -2039,6 +2055,10 @@
   padding: 1em;
   line-height: 1.2;
   font-size: 0.9em;
+  color: inherit;
+  text-align: left;
+}
+.feature div.content a {
   color: inherit;
 }
 .col-smart:first-child:nth-last-child(4) ~ .col-smart .feature .content h2,
@@ -2239,9 +2259,6 @@
   width: 60%;
   float: left;
 }
-.admin_page_feature-box-edit #mce-feature-box-form #colours {
-  display: none;
-}
 .admin_page_feature-box-edit #mce-feature-box-form #colours li {
   list-style-type: none;
   display: block;
@@ -2274,6 +2291,15 @@
 .admin_page_feature-box-edit #mce-feature-box-form #colours li.lightgrey .cta {
   background: #ffffff;
   color: #999999 !important;
+}
+.admin_page_feature-box-edit #mce-feature-box-form #colours li.superlightgrey {
+  background: #eeeeee;
+  color: #000000;
+}
+.admin_page_feature-box-edit #mce-feature-box-form #colours li.superlightgrey .cta-inline,
+.admin_page_feature-box-edit #mce-feature-box-form #colours li.superlightgrey .cta {
+  background: #000000;
+  color: #eeeeee !important;
 }
 .admin_page_feature-box-edit #mce-feature-box-form #colours li.green {
   background: #278b27;
@@ -2415,6 +2441,15 @@
 .admin_page_feature-box-edit #mce-feature-box-form .feature-box.lightgrey .cta {
   background: #ffffff;
   color: #999999 !important;
+}
+.admin_page_feature-box-edit #mce-feature-box-form .feature-box.superlightgrey {
+  background: #eeeeee;
+  color: #000000;
+}
+.admin_page_feature-box-edit #mce-feature-box-form .feature-box.superlightgrey .cta-inline,
+.admin_page_feature-box-edit #mce-feature-box-form .feature-box.superlightgrey .cta {
+  background: #000000;
+  color: #eeeeee !important;
 }
 .admin_page_feature-box-edit #mce-feature-box-form .feature-box.green {
   background: #278b27;
@@ -2567,7 +2602,7 @@
   padding: 5px;
 }
 .admin_page_columns-box-edit #wpcontent .feature {
-  box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
   text-decoration: none;
   position: relative;
   width: 100%;
@@ -2614,6 +2649,15 @@
 .admin_page_columns-box-edit #wpcontent .feature.lightgrey .cta {
   background: #ffffff;
   color: #999999 !important;
+}
+.admin_page_columns-box-edit #wpcontent .feature.superlightgrey {
+  background: #eeeeee;
+  color: #000000;
+}
+.admin_page_columns-box-edit #wpcontent .feature.superlightgrey .cta-inline,
+.admin_page_columns-box-edit #wpcontent .feature.superlightgrey .cta {
+  background: #000000;
+  color: #eeeeee !important;
 }
 .admin_page_columns-box-edit #wpcontent .feature.green {
   background: #278b27;
@@ -2687,6 +2731,9 @@
 .admin_page_columns-box-edit #wpcontent .feature.lightgrey svg .triangle {
   fill: #999999;
 }
+.admin_page_columns-box-edit #wpcontent .feature.superlightgrey svg .triangle {
+  fill: #eeeeee;
+}
 .admin_page_columns-box-edit #wpcontent .feature.green svg .triangle {
   fill: #278b27;
 }
@@ -2758,13 +2805,17 @@
   width: 100%;
   left: 0;
   z-index: 2;
-  margin: 0 0 1em 0;
+  margin: 0 0 0px 0;
   font-size: 1.8em;
   line-height: 1.2;
-  text-align: center;
+  text-align: left;
   -webkit-transition: background 0.2s ease;
           transition: background 0.2s ease;
   min-height: 60px;
+  color: inherit;
+}
+.admin_page_columns-box-edit #wpcontent .feature h2 a {
+  color: inherit;
 }
 .admin_page_columns-box-edit #wpcontent .feature div.content {
   box-sizing: border-box;
@@ -2772,6 +2823,10 @@
   padding: 1em;
   line-height: 1.2;
   font-size: 0.9em;
+  color: inherit;
+  text-align: left;
+}
+.admin_page_columns-box-edit #wpcontent .feature div.content a {
   color: inherit;
 }
 .row {
