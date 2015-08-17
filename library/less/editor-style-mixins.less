@@ -199,7 +199,12 @@ div.cf.newline {
 
 
 
+
+
 .feature {
+
+  box-shadow: 0 3px 3px 3px rgba(0,0,0,0.2);
+
 
   > p {
     display: none; // Stupid wordpress
@@ -207,9 +212,7 @@ div.cf.newline {
 
   text-decoration: none;
   
-  i.fa {
-    margin-right: 2em;
-  }
+  
 
   br {
     display: none;
@@ -222,7 +225,7 @@ div.cf.newline {
   }
 
   * {
-
+    
     color: inherit;
     
 
@@ -235,29 +238,30 @@ div.cf.newline {
     max-width: 100%;
   }
 
- // background: @white;
+  background: @light;
+  
+  .colours-bg();
+  .svg-colours();
+  header svg {
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      bottom: -1px;
+      z-index: 5;
+  }
 
-
- header svg {
-  position: absolute;
-  width: 100%;
-  height: 20px;
-  bottom: -1px;
-  z-index: 5;
-}
-
-.footer-svg {
-  position: absolute;
-  width: 100%;
-  height: 20px;
-  bottom: -20px;
-  z-index: 5; 
-}
-
+  .footer-svg {
+    position: absolute;
+     width: 100%;
+    height: 20px;
+    bottom: -20px;
+    z-index: 5; 
+  }
+ 
  // box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.7);
 
 
-
+  
 
   // border-bottom: 2px solid darken(@light, 10%);
   border-radius: 2px;
@@ -273,17 +277,16 @@ div.cf.newline {
     width: 100%;
     display: block;
     height: 0;
-    padding-bottom: 70%;
+    padding-bottom: 55%;
     position: relative;
     overflow: hidden;
     border-bottom: none !important;
-    z-index: 0;
 
     p {
       padding: 0;
       margin: 0;
     }
-
+   
 
     img {
       position: absolute;
@@ -303,21 +306,23 @@ div.cf.newline {
     }
   }
 
-  h2 {
+   h2 {
+      
+      bottom: 0;
+      
+      
 
-
-
-
-
-    width: 100%;
-    left: 0;
-
-    z-index: 2;
-    margin: 0 0 1em 0;
-    font-size: 1.2em;
-    text-align: left;
-    transition:background 0.2s ease;
-  }
+      width: 100%;
+      left: 0;
+      
+      z-index: 2;
+      margin: 0 0 1em 0;
+      font-size: 1.8em;
+      line-height: 1.2;
+      text-align: center;
+      transition:background 0.2s ease;
+      min-height: 60px;
+    }
 
   
 
@@ -328,70 +333,8 @@ div.cf.newline {
     line-height: 1.2;
     font-size: 0.9em;
     color: inherit;
-    
-    height: auto;
-    z-index: 2;
-    position: absolute;
-    height: 100%;
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    padding: 0;
-    
-
-  }
-
-  .content h2 {
-    position: absolute;
-    bottom: 24%;
-    left: 0;
-    background:fade(#666666, 70%);
-    background:fade(@purple, 90%);
-    width: auto;
-    top: auto;
-    padding: 0.5em;
-
-    font-size: 1.5em;
-    color: #ffffff;
-    font-family: @body-font;
-  }  
 
 
-  .copy {
-    color: #ffffff;
-    p:first-letter {
-      font-size: 1em !important;
-      .h-font;
-    }
-    background:fade(@purple, 60%);
-    position: absolute;
-    bottom: 20%;
-    width: auto;
-    max-width: 70%;
-    left: 10%;
-    padding: 0.5em;
-    font-size: 1em;
-
-    font-family: @h-font;
-    text-shadow:none;
-    font-weight: normal;
-  }
-
-
-  @media screen and (max-width: @tablet-break) {
-    .content h2 {
-      font-size: 1em;
-      line-height: 1;
-      bottom: 15%;
-    }
-
-    .copy {
-      top: auto;
-      bottom: 8%;
-      max-width: 90%;
-      left: 0;
-      text-shadow:none;
-    }
   }
 }
 

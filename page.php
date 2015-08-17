@@ -30,13 +30,13 @@
 								$atts = 
 								array(
 									'tag' => implode(',', $term_array),
-									'fill' => true
+									'fill' => false
 								);
 
 								?>
 								<div id="carousel" class='carousel'>  
 
-								<?php echo display_attached_images_carousel($atts, false); ?>
+								<?php echo display_attached_images_carousel($atts, true); ?>
 
 								</div>
 
@@ -48,35 +48,14 @@
 									<?php echo responsive_image_thumbnail(null, 'panorama'); ?>
 
 								</div>
-
-
-
-
 							<?php } ?>
 
-							<?php 
 
-							$custom_content = get_post_meta( get_the_id(), 'custom_content', true );
-
-							if ( $custom_content ) {
-
-
-								$parts = explode("|", trim($custom_content));
-							
-								echo "<div class='custom-subheading'>";
-								foreach ($parts as $part) {
-									echo "<span>" . $part . "</span>";
-								}
-								echo "</div>";
-							}
-
-							?>
-
-			<div id="content">
+			<div id="content" class='max-central'>
 
 				<div id="inner-content" class="wrap cf">
 
-				
+						
 <?php get_template_part( 'content/page' ); ?>
 
 

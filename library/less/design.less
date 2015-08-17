@@ -5,9 +5,9 @@
 // use mixins to make cleaner CSS, but keep the config here.
 
 .body-style() {
-	color: @default-text;
-	background: @body-background; // may want image.
-  
+  color: @default-text;
+  background: @body-background; // may want image.
+  background-image: url('/wp-content/themes/113-bandi-restaurant/library/images/textured-background.gif');
 }
 
 
@@ -26,7 +26,7 @@ hr {
 
 
 #container {
-  // top: @header-height-px;
+  top: @header-height-px;
   position: relative;
  
   margin-bottom: @header-height-px;
@@ -36,60 +36,11 @@ hr {
   }
 }
 
-.blog, .archive, .single-post {
-  #container {
-    padding-top: 140px;
-
-    @media screen and (max-width: 900px) {
-      padding-top: 40px;
-    }
-  }
-}
-
 #carousel {
   position: relative;
-  // margin-top: -3em;
-  margin-bottom: 1em;
+  margin-top: -3em;
+  // margin-bottom: @header-height-px;
 }
-
-
-#blog-sidebar {
-  top: -60px;
-  padding-top: 60px;
-  
-  padding-left: 10px;
-  
-  background: @body-background;
-
-  &:before {
-    position: fixed;
-    height: 100%;
-    
-    // border-left: 2px solid fade(black, 20%);
-    box-shadow: -5px 0 10px -4px rgba(0, 0, 0, 0.29);
-    z-index: -1;
-    width: 40px;
-    background: @body-background;
-
-    top: 0;
-    @pseudo-offset: ( ( @max-central-width * (100% - @global-sidebar-width - @global-sidebar-margin) ) / 100 ) + 20px;
-    
-    
-    left: ~"calc( ((100vw - @{max-central-width} ) / 2) + @{pseudo-offset})";
-
-    @media screen and (max-width: @max-central-width) {
-      left: (100% - @global-sidebar-width - (@global-sidebar-margin / 2));
-    }
-
-    @media screen and (max-width: 900px) {
-      display: none;
-    }
-    content: "";
-    
-  }
-
-}
-
 
 .admin-bar {
   .header {
@@ -119,13 +70,10 @@ hr {
   border-right:2px solid transparent;
   background-clip: border-box; 
 
-
-
   a {
     padding: 5px 1em;
-    font-size: 0.8em;
-    text-transform: uppercase;
-    font-weight: bold;
+
+    text-transform: capitalize;
   }
 
   .sub-menu, .children {
@@ -174,7 +122,7 @@ hr {
 }
 
 body {
-	.body-style();
+  .body-style();
 }
 
 
@@ -184,30 +132,11 @@ body {
 }
 
 
-.col-smart .wp-caption {
-  width: 100% !important;
-  padding-bottom: 55% !important;
-
-  overflow: hidden;
-
-  img {
-    position: absolute;
-    top: 0;
-
-    width: 100%;
-    height: auto;
-  }
-
-  .wp-caption-dd {
-    margin-bottom: 0;
-  }
-}
-
 
 .full-width-background-maker(@color : RGBA(0,0,0,0.5)) {
-	position: relative;
-	padding-top: 2em;
-	padding-bottom: 2em;
+  position: relative;
+  padding-top: 2em;
+  padding-bottom: 2em;
   margin: 3em 0;
 
   &:before {
@@ -224,41 +153,24 @@ body {
 }
 
 .page #content {
-	width: 100%;
+  width: 100%;
   
 
-  padding-top: 1em;
 
- 
+  margin-top: -@header-height-px;
+  padding-top: @header-height-px / 2;
 
- 
+  box-shadow: 0 1px 3px fade(black, 50%);
+
+  background: #fff;
+
+  max-width: @max-central-outer-width;
   
 }
 
-p:empty + p {
-  margin-top: 1em;
-}
-
-p:empty {
-  display:none;
-}
-
-p:empty + .gallery {
-  margin-top: 0;
-}
-
-
-body {
-  .colours-bg();
-}
-
-
-.page #inner-content .entry-content > .full-width-background:first-child {
-  margin-top: 0;
-}
 
 .page #inner-content {
-	 
+   
   
     .entry-content > *, .article-header > * {
       .max-central;
@@ -270,19 +182,9 @@ body {
       padding: 2em 0;
       max-width: 100%;
 
-
-
       > * {
         .max-central;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
       }
-
-
-
-
 
       @media screen and (max-width: @max-central-width) {
         width: 100%;
@@ -295,7 +197,7 @@ body {
       background: @light;
 
       .colours-bg();
-  
+      background-image: url('/wp-content/themes/bandi-restaurant/library/images/textured-background.png') !important;
 
       & > h2 {
         margin-top: 0;
@@ -303,7 +205,7 @@ body {
 
       &:last-child {
         margin-bottom: 0;
-        //padding-bottom: 4em;
+        padding-bottom: 4em;
       }
     }
 
@@ -318,9 +220,4 @@ body {
 /// this is a bit hacky but ti'll work
 .purple, .green, .black {
   .licapacities('white');
-}
-
-
-#container {
-  margin-bottom:0;
 }

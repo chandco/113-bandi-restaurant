@@ -12,6 +12,8 @@ function my_ag_child_theme_setup() {
 
 
 
+
+
 function child_theme_shortcode_feature_box($atts, $content = false) {
 
 	
@@ -42,7 +44,8 @@ function child_theme_shortcode_feature_box($atts, $content = false) {
 
 		$img = wp_get_attachment_image_src($atts["imgid"], responsive_conditional_size('medium'));
 		$output .= 	'<header>';
-		$output .= 		'<img src="' . $img[0] . '" />';		
+		$output .= 		'<img src="' . $img[0] . '" />';	
+		$output .= '<svg viewBox="0 0 20 10" preserveAspectRatio="none"><polygon class="triangle" stroke-width=0 points="0,8 0,10 20,10 20,0" /></svg>';
 		$output .= 	'</header>';
 	}
 
