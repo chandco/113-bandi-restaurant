@@ -240,6 +240,28 @@ body {
           clear: both;
           float: none;
         }
+
+    }
+
+    &.third {
+
+        clear: none;
+        width: 33%;
+        padding: 2em;
+        float: left;
+        margin-bottom: 0;
+        box-shadow: none;
+
+        + .third {
+          
+        }
+
+        @media screen and (max-width: @tablet-break) {
+          width: 100%;
+          padding: 2em 0;
+          clear: both;
+          float: none;
+        }
       }
     }
 
