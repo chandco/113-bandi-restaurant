@@ -2657,7 +2657,7 @@ body {
   padding-top: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   background: #fff;
-  max-width: 1300px;
+  max-width: 100%;
 }
 .entry-content {
   padding: 1.5em 0 0;
@@ -2822,38 +2822,6 @@ body {
   margin-bottom: 0;
   padding-bottom: 4em;
   box-shadow: inset 0 -7px 8px -4px rgba(0, 0, 0, 0.62);
-}
-.page #inner-content .full-width-background.half {
-  clear: none;
-  width: 50%;
-  padding: 2em;
-  float: left;
-  margin-bottom: 0;
-  box-shadow: none;
-}
-@media screen and (max-width: 60em) {
-  .page #inner-content .full-width-background.half {
-    width: 100%;
-    padding: 2em 0;
-    clear: both;
-    float: none;
-  }
-}
-.page #inner-content .full-width-background.third {
-  clear: none;
-  width: 33%;
-  padding: 2em;
-  float: left;
-  margin-bottom: 0;
-  box-shadow: none;
-}
-@media screen and (max-width: 60em) {
-  .page #inner-content .full-width-background.third {
-    width: 100%;
-    padding: 2em 0;
-    clear: both;
-    float: none;
-  }
 }
 .purple li.capacities,
 .green li.capacities,
@@ -3557,7 +3525,7 @@ dl {
   background: #278b27;
   height: 60px;
   padding: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
 }
 @media screen and (max-width: 900px) {
@@ -8344,6 +8312,19 @@ html {
   -webkit-transform: none;
       -ms-transform: none;
           transform: none;
+}
+.header #inner-header #logo:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: -4px;
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.5);
+  background: #fff;
+  -webkit-transform-origin: top;
+      -ms-transform-origin: top;
+          transform-origin: top;
 }
 .header #inner-header #logo:after {
   position: absolute;
