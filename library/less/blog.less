@@ -111,7 +111,7 @@
 
 	.post-preview {
 		width: 48%; // assumes 4, might have to fix this for other parents
-		margin-bottom: 3em;
+		margin-bottom: 2em;
 	}
 
 }
@@ -144,7 +144,7 @@
 		}
 
 		> .post-preview {
-			margin-bottom: 4em;
+			margin-bottom: 2em;
 		}
 
 
@@ -188,6 +188,9 @@
 .post-preview {
 	display: block;
 	background: transparent;
+
+	margin-top: 0 !important;
+  
 
 	&:after {
 
@@ -248,7 +251,7 @@
 			position: absolute;
 			bottom: -20px;
 			height: 100%;
-			transform:skewY(-5deg);
+			// transform:skewY(-5deg);
 			width: 100%;
 			left: 0;
 			background:white;
@@ -267,6 +270,10 @@
 
     padding: 0;
     margin: 1em auto;
+
+    .post-preview {
+    	margin-top: 0;
+    }
          
 
       @media screen and (min-width: @tablet-break) {
@@ -280,7 +287,7 @@
 
         // Law Soc Specific:
         .post-preview {
-        	margin-bottom: 4em;
+        	margin-bottom: 2em;
         } 
       }
 
@@ -289,7 +296,7 @@
         .flex-container(1);  
 
         .post-preview {
-        	margin-bottom: 4em;
+        	margin-bottom: 2em;
         }
 
 

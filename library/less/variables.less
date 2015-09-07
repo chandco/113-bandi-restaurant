@@ -83,8 +83,11 @@
 @formbg : @lightblue;
 
 // Header Styles and sizes
-@header-background: @green;
-
+@header-background: fade(black, 20%);
+@header-logo-tab-bg: @white;
+@header-logo-width: 8%; // smaller for this site - longer logos may need more.
+@header-logo-height: 150%;
+//mobile and headers stuff
 
 // sidebars
 @widget-background: fade( @lightgrey, 20% );
@@ -95,10 +98,10 @@
 @nav-link-color: @white;
 @nav-link-background: transparent;
 
-@nav-link-current-text: @black;
+@nav-link-current-text: @white;
 @nav-link-current-background: fade(@white, 10%);
 
-@nav-highlight : fade(@white, 20%);
+@nav-highlight : fade(@white, 30%);
 @nav-highlight-text : @white;
 
 
@@ -128,20 +131,15 @@
 @slide-background: @darkgrey;
 
 
-@carousel-max-height: 500px;
-@carousel-height: 500px; 
 
-
-// Header Styles and sizes
-@header-background: @green;
-@header-logo-tab-bg: @white;
-@header-logo-width: 10%; // smaller for this site - longer logos may need more.
-@header-logo-height: 180%;
-//mobile and headers stuff
 
 
 @mobile-line-height: 14px;
 @header-height-px : 60px;
+
+@carousel-max-height: 500px + @header-height-px;
+@carousel-height: 500px  + @header-height-px; 
+
 
 
 @content-margin : 20px; // better than em because of positioning absolute

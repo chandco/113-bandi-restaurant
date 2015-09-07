@@ -26,13 +26,17 @@ hr {
 
 
 #container {
-  top: @header-height-px;
+  top: 0;//@header-height-px;
   position: relative;
  
   margin-bottom: @header-height-px;
   padding-top: 2.5em;
   @media screen and (max-width: @tablet-break) {
     padding-top: 0;
+  }
+
+  .blog &, .archive & {
+    top: @header-height-px;
   }
 }
 
@@ -58,7 +62,7 @@ hr {
 
 
 .page-template-template-home #content {
-  margin-top: @header-height-px;
+  //margin-top: @header-height-px;
 }
 
 .nav-li-style() {
@@ -157,7 +161,7 @@ body {
   
 
 
-  margin-top: -@header-height-px;
+  
   padding-top: @header-height-px / 2;
 
   box-shadow: 0 1px 3px fade(black, 50%);
@@ -179,6 +183,16 @@ body {
 .entry-content > * {
   width:100%;
 }
+
+
+
+.entry-content .full-width-background {
+  
+  &:first-of-type:nth-child(n+2) {
+    margin-top: 2em;
+  }
+}
+
 
 .page #inner-content {
    
@@ -224,6 +238,9 @@ body {
 
       
 
+     
+
+
 
     
 
@@ -238,6 +255,7 @@ body {
     }
 
 }
+
 
 
 /// this is a bit hacky but ti'll work

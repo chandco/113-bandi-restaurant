@@ -101,8 +101,11 @@ add_filter("the_content", "BBG_WrapStuff", 0);
 
 function BBG_WrapStuff( $post ) {
 	$array = array (
-      "{gallery" => "[gallery"
+      "{gallery" => "[gallery",
+      "{feature-box" => "[feature-box"
 	);
+
+	$post = strtr($post, $array);
 
 	$post = strtr($post, $array);
 
